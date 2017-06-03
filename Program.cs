@@ -11,11 +11,13 @@ namespace dotnetcoretest
     {
         public static void Main(string[] args)
         {
+
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseIISIntegration()
+		.UseIISIntegration()
                 .UseStartup<Startup>()
+                .UseUrls("http://localhost:5000/")
                 .Build();
 
             host.Run();
