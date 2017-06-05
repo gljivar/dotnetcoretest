@@ -1,0 +1,16 @@
+@using dotnetcoretest.Models;
+@{
+    ViewData["Title"] = "Words";
+}
+
+<ul>
+@foreach (var std in ViewData["Words"] as IList<Word>)
+{
+    <li>
+        @std.Id
+    </li>
+}
+</ul>
+
+
+<div>Words</div>
