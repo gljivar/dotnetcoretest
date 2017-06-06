@@ -26,6 +26,14 @@ namespace dotnetcoretest.Controllers
             return View();
         }
 
+        public IActionResult Add()
+        {
+            wordRepository.Add(new Word(11));
+            
+            return RedirectToAction("Index");
+
+        }
+
         public IActionResult Error()
         {
             return View();
